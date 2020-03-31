@@ -27,8 +27,17 @@ public class Hook extends BaseUtil{
 
         System.out.println("Opening the browser : Chrome");
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
-        base.Driver = new ChromeDriver();
+       System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+ 
+            // Initialize browser
+            WebDriver driver=new ChromeDriver();
+
+            // Open Execute automation site
+            driver.get("http://executeautomation.com/demosite/Login.html");
+
+            // Maximize browser
+
+            driver.manage().window().maximize();
 
 
         //Chrome driver
